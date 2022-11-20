@@ -26,10 +26,13 @@ const scene  = new THREE.Scene();
 
 // create box and add to scene
 let boxGeo = new THREE.BoxGeometry(1, 1, 1);
-let boxMat = new THREE.MeshPhongMaterial();
+let boxMat = new THREE.MeshPhongMaterial({color: new THREE.Color('rgb(255,0,0)')});
 let boxMesh = new THREE.Mesh(boxGeo, boxMat);
 
+
 scene.add(boxMesh);
+
+scene.add( new THREE.AmbientLight( 0xffffff ) );
 
 // render
 renderer.render(scene, camera);
