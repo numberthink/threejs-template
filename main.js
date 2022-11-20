@@ -1,6 +1,8 @@
 import './style.css';
 import * as THREE from 'three';
 
+const init = () => {
+
 // create canvas element where scene will be rendered
 const canvas = document.querySelector('canvas.webgl');
 
@@ -80,3 +82,11 @@ const tick = () => {
 
 tick(); // call tick function to start the animation
 
+}
+
+try {
+  init();
+}
+catch (err) {
+  document.getElementsByClassName('fallbackMsg')[0].style.visibility = 'visible';
+}

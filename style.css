@@ -14,6 +14,8 @@
   -webkit-text-size-adjust: 100%;
 }
 
-body {
+body, p {
   margin: 0;
 }
+
+
